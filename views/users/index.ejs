@@ -9,10 +9,13 @@
     <h1>Welcome to fazbook</h1>
     <% users.forEach(function(user) { %>
       <div>
-        <span><%= user.email %></span>
-        <span><%= user.firstname %></span>
-        <span><%= user.lastname %></span>
+        <span><%= user.firstName %></span>
+        <span><%= user.lastName %></span>
         <span><%= user.dob %></span>
+        <span><%= user.email %></span>
+        <form action="<%= `/users/${user.id}?_method=DELETE` %>" method="POST">
+          <button type="submit" />x</button>
+        </form>
       </div>
     <% }); %>
   </body>
